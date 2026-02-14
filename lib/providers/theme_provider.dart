@@ -35,7 +35,7 @@ class ThemeNotifier extends StateNotifier<ThemeState> {
   final SharedPreferences _prefs;
   
   ThemeNotifier(this._prefs) 
-      : super(ThemeState(isDarkMode: _prefs.getBool('isDarkMode') ?? false));
+      : super(ThemeState(isDarkMode: _prefs.getBool('isDarkMode') ?? true)); // Default to dark mode
 
   Future<void> toggleTheme() async {
     final newValue = !state.isDarkMode;

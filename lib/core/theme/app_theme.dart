@@ -12,19 +12,21 @@ class AppTheme {
   static const Color lightBatikColor = Color(0xFF0288D1);
   static const Color lightGoldColor = Color(0xFFFFD700);
   
-  // Dark Mode Colors
-  static const Color darkPrimaryColor = Color(0xFF4FC3F7); // Lighter Blue for dark
-  static const Color darkAccentColor = Color(0xFF81D4FA); // Light Blue for accents
-  static const Color darkBackgroundColor = Color(0xFF121212);
-  static const Color darkCardColor = Color(0xFF1E1E1E);
+  // Dark Mode Colors (Spotify-like)
+  static const Color darkPrimaryColor = Color(0xFF1DB954); // Spotify Green
+  static const Color darkAccentColor = Color(0xFFFFB81C); // Gold alternative
+  static const Color darkBackgroundColor = Color(0xFF0F0F0F); // Almost black
+  static const Color darkSidebarColor = Color(0xFF121212); // Dark sidebar
+  static const Color darkCardColor = Color(0xFF1E1E1E); // Slightly lighter cards
+  static const Color darkHoverColor = Color(0xFF282828); // Light hover
   static const Color darkBatikColor = Color(0xFF1565C0);
   static const Color darkGoldColor = Color(0xFFD4AF37);
 
   // Text styles for readability
   static const Color lightTextPrimary = Color(0xFF212121);
   static const Color lightTextSecondary = Color(0xFF757575);
-  static const Color darkTextPrimary = Color(0xFFFFFFFF);
-  static const Color darkTextSecondary = Color(0xFFB0BEC5);
+  static const Color darkTextPrimary = Color(0xFFFFFFFF); // White
+  static const Color darkTextSecondary = Color(0xFFB3B3B3); // Gray
 
   static ThemeData lightTheme() {
     final textTheme = GoogleFonts.poppinsTextTheme(ThemeData.light().textTheme);
