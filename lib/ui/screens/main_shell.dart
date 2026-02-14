@@ -8,6 +8,7 @@ import 'search_screen.dart';
 import 'playlist_screen.dart';
 import 'player_screen.dart';
 import 'equalizer_screen.dart';
+import 'desktop_main_shell.dart';
 
 class MainShell extends ConsumerStatefulWidget {
   const MainShell({super.key});
@@ -15,6 +16,10 @@ class MainShell extends ConsumerStatefulWidget {
   @override
   ConsumerState<MainShell> createState() => _MainShellState();
 }
+
+// Responsive breakpoints
+const double mobileBreakpoint = 768;
+const double desktopBreakpoint = 1200;
 
 class _MainShellState extends ConsumerState<MainShell> {
   int _selectedIndex = 0;
@@ -99,6 +104,14 @@ class _MainShellState extends ConsumerState<MainShell> {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    
+    // Use desktop layout for screens >= 1200px
+    if (screenWidth >= desktopBreakpoint) {
+      return const DesktopMainShell();
+    }
+    
+    // Use mobile layout for smaller screens
     final audioState = ref.watch(audioProvider);
     final hasSong = audioState.currentSong != null;
 
