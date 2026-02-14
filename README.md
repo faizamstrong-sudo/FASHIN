@@ -8,6 +8,8 @@
 
 > A stunning, modern, and feature-rich music player built with Flutter. Experience your music with a beautiful Glassmorphism UI and powerful tools. Available on Windows, macOS, Android, and iOS.
 
+> **🎉 NEW:** Spotify-like desktop UI with 3-column layout! See [SPOTIFY_REDESIGN.md](SPOTIFY_REDESIGN.md) for details.
+
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 ![macOS](https://img.shields.io/badge/macOS-000000?style=for-the-badge&logo=apple&logoColor=white)
@@ -20,9 +22,11 @@
 ## ✨ Key Features
 
 ### 🎨 **Stunning UI/UX**
+- **NEW: Spotify-like Desktop UI**: Modern 3-column layout for desktop (≥1200px) with sidebar navigation, main content, and now playing panel
+- **Responsive Design**: Automatically adapts between mobile and desktop layouts based on screen size
 - **Glassmorphism Design**: A sleek, modern interface with frosted glass effects and dynamic backgrounds
 - **Custom Window Frame**: A fully custom, borderless window experience that blends seamlessly with your desktop
-- **Themes**: Beautiful dark mode and accent color customization
+- **Themes**: Beautiful dark mode (default) and accent color customization with Spotify-inspired color palette
 - **Smart Art**: Dynamic album art that adapts to your music, with automatic online fetching from Spotify
 - **Spotify Canvas**: Dynamic video backgrounds while in full-screen mode, automatically fetched from Spotify
 
