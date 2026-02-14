@@ -219,13 +219,13 @@ class NowPlayingPanel extends ConsumerWidget {
                     _buildInfoRow(
                       icon: Icons.people,
                       label: 'Monthly listeners',
-                      value: _formatListeners(1234567),
+                      value: 'N/A', // Would need API integration for real data
                     ),
                     const SizedBox(height: 8),
                     _buildInfoRow(
                       icon: Icons.music_note,
                       label: 'Total tracks',
-                      value: '42',
+                      value: 'N/A', // Would need API integration for real data
                     ),
                   ],
                 ),
@@ -250,9 +250,9 @@ class NowPlayingPanel extends ConsumerWidget {
                   ),
                   const SizedBox(height: 12),
                   _buildInfoItem('Duration', _formatDuration(audioState.duration)),
-                  _buildInfoItem('Album', song.album ?? 'Unknown Album'),
-                  _buildInfoItem('Genre', 'Pop'),
-                  _buildInfoItem('Released', '2024'),
+                  _buildInfoItem('Source', 'YouTube Music'),
+                  if (song.youtubeUrl != null)
+                    _buildInfoItem('Video ID', song.id),
                 ],
               ),
             ),
@@ -411,15 +411,6 @@ class NowPlayingPanel extends ConsumerWidget {
         }),
       ),
     );
-  }
-
-  String _formatListeners(int count) {
-    if (count >= 1000000) {
-      return '${(count / 1000000).toStringAsFixed(1)}M';
-    } else if (count >= 1000) {
-      return '${(count / 1000).toStringAsFixed(1)}K';
-    }
-    return count.toString();
   }
 
   String _formatDuration(Duration? duration) {
